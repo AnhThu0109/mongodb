@@ -9,9 +9,11 @@ const userRoute = require("./routes/user.js");
 const loginTimesRoute = require("./routes/loginTimes.js");
 dotenv.config();
 
-mongoose.connect(process.env.MONGODB_URL, () => {
-  console.log("CONNECTED TO MONGO DB");
-});
+mongoose
+  .connect(process.env.MONGODB_URL)
+  .then(() => console.log("Success connect"))
+  .catch(() => console.log("Fail connect"))
+;
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
