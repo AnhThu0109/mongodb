@@ -19,6 +19,8 @@ const authController = {
         firstname: req.body.firstname,
         lastname: req.body.lastname,
         gender: req.body.gender,
+        location: req.body.location,
+        phone: req.body.phone,
         isAdmin: req.body.isAdmin,
       });
 
